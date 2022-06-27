@@ -18,8 +18,8 @@ export default class PathfindingVisualizer extends Component {
                 const currentNode = {
                     col,
                     row,
-                    isStart: row === 10 && col === 5,
-                    isFinish: row === 10 && col === 45,
+                    isStart: row === 10 && col === 15,
+                    isFinish: row === 10 && col === 25,
                 };
                 currentRow.push(currentNode);
             }
@@ -37,7 +37,7 @@ export default class PathfindingVisualizer extends Component {
                 {nodes.map((row, rowIdx) => {
                     return (<div key={rowIdx}>
                         {row.map((node, nodeIdx) => {
-                            const {isStart , isFinish}=node;
+                            const { isStart, isFinish } = node;
                             return (<Node
                                 key={nodeIdx}
                                 isStart={isStart}
